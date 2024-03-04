@@ -547,7 +547,7 @@ func (c *Client) CreateStorageISCSIBlockLUN(name string, storagePoolID int, capa
 
 	data.Add("WCEnable", b2is(wcEnable))
 	data.Add("FUAEnable", b2is(fuaEnable))
-	data.Add("FileIO", "no") // File or block based lun
+	data.Add("FileIO", "yes") // File or block based lun
 	data.Add("poolID", strconv.Itoa(storagePoolID))
 	data.Add("lv_ifssd", b2yn(ssdCache))
 	data.Add("LUNPath", name)
